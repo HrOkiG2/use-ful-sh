@@ -1,0 +1,1 @@
+awk -F'exception":"\\[object\\] \\(' '{for(i=2;i<=NF;i++){split($i,a,"("); print a[1]}}' your_file_name | sort | uniq -c | sort -nr
